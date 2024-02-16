@@ -11,5 +11,10 @@ scraper = WikipediaScraper()
 
 countries = scraper.get_countries()
 
-for country in countries:
-    scraper.get_leaders(country)
+try:
+    for country in countries:
+        scraper.get_leaders(country)
+    print('The data were obtained successfully.')
+
+except:
+    print("Something went wrong. Please, try again later.")
